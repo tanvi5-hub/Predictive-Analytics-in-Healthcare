@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Disease Outbreak Prediction</h2>
+<img src="data:image/png;base64,{{ plot_url }}" alt="Disease Outbreak Visualizations" style="width:100%;">
+<h3>Interpretation:</h3>
+<ul>
+    <li>The first graph shows trends in disease incidence and vaccination rates over time.</li>
+    <li>The SARIMA forecast predicts future incidence rates based on historical data.</li>
+    <li>The LSTM forecast provides an alternative prediction using deep learning techniques.</li>
+    <li>The correlation heatmap displays the relationship between incidence and vaccination rates.</li>
+    <li>The distribution of incidence rates helps identify typical ranges and outliers.</li>
+    <li>The seasonal decomposition breaks down the time series into trend, seasonal, and residual components.</li>
+</ul>
+{% endblock %}

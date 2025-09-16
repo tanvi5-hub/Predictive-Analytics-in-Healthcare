@@ -1,0 +1,15 @@
+
+{% extends "base.html" %}
+{% block content %}
+<h2>Temporal Analysis</h2>
+<img src="data:image/png;base64,{{ plot_url }}" alt="Temporal Analysis Visualizations" style="width:100%;">
+<h3>Interpretation:</h3>
+<ul>
+    <li>Encounters Over Time: Shows trends in the number of medical encounters.</li>
+    <li>Conditions Over Time: Illustrates how the frequency of medical conditions has changed.</li>
+    <li>Medications Over Time: Displays trends in medication prescriptions.</li>
+    <li>Immunizations Over Time: Shows patterns in immunization administration.</li>
+    <li>Seasonal Decomposition of Encounters: Breaks down the encounter time series into trend, seasonal, and residual components.</li>
+    <li>Average Claim Cost Over Time: Illustrates how healthcare costs have changed over time.</li>
+</ul>
+{% endblock %}

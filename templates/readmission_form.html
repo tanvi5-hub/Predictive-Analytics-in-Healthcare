@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Patient Readmission Prediction</h2>
+<form method="post">
+    <label for="patient_id">Patient ID:</label>
+    <input type="text" id="patient_id" name="patient_id" required><br><br>
+    
+    <input type="submit" value="Predict Readmission Risk">
+</form>
+{% endblock %}

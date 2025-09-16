@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Healthcare Analytics Dashboard</h1>
+
+<p>Welcome, {{ session['username'] }} (Role: {{ session['role'] }})</p>
+<a href="{{ url_for('logout') }}">Logout</a>
+
+<h2>Data Analysis</h2>
+<ul>
+    <li><a href="{{ url_for('univariate_analysis') }}">Univariate Analysis</a></li>
+    <li><a href="{{ url_for('bivariate_analysis') }}">Bivariate Analysis</a></li>
+    <li><a href="{{ url_for('temporal_analysis') }}">Temporal Analysis</a></li>
+    <li><a href="{{ url_for('cohort_analysis') }}">Cohort Analysis</a></li>
+    <li><a href="{{ url_for('data_quality') }}">Data Quality Assessment</a></li>
+</ul>
+<h2>Predictive Models</h2>
+<ul>
+    <li><a href="{{ url_for('readmission') }}">Patient Readmission Prediction</a></li>
+    <li><a href="{{ url_for('disease_outbreak') }}">Disease Outbreak Prediction</a></li>
+    <li><a href="{{ url_for('medication_adherence') }}">Medication Adherence Prediction</a></li>
+</ul>
+{% endblock %}

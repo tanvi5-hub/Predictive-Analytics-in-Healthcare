@@ -1,0 +1,12 @@
+
+{% extends "base.html" %}
+{% block content %}
+<h2>Data Quality Assessment</h2>
+<img src="data:image/png;base64,{{ plot_url }}" alt="Data Quality Visualizations" style="width:100%;">
+<h3>Interpretation:</h3>
+<ul>
+    <li>These bar charts show the percentage of missing values in each dataset.</li>
+    <li>Higher bars indicate a larger percentage of missing data for that particular feature.</li>
+    <li>This visualization helps identify potential data quality issues and areas where data cleaning or imputation might be necessary.</li>
+</ul>
+{% endblock %}

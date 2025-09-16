@@ -1,0 +1,15 @@
+
+{% extends "base.html" %}
+{% block content %}
+<h2>Bivariate Analysis</h2>
+<img src="data:image/png;base64,{{ plot_url }}" alt="Bivariate Analysis Visualizations" style="width:100%;">
+<h3>Interpretation:</h3>
+<ul>
+    <li>Age vs Total Claim Cost: Shows how healthcare costs vary with patient age.</li>
+    <li>Gender vs Total Claim Cost: Compares healthcare costs between genders.</li>
+    <li>Encounter Class vs Total Claim Cost: Illustrates how costs differ across types of medical encounters.</li>
+    <li>Age vs Number of Medications: Displays the relationship between age and the number of medications prescribed.</li>
+    <li>Age vs Number of Conditions: Shows how the number of medical conditions relates to patient age.</li>
+    <li>Number of Conditions vs Total Claim Cost: Illustrates how healthcare costs increase with the number of conditions a patient has.</li>
+</ul>
+{% endblock %}

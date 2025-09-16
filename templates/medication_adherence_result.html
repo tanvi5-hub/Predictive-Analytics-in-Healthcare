@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Medication Adherence Prediction Result</h2>
+{% if prediction == 1 %}
+    <p>The patient is <strong>likely</strong> to adhere to their medication regimen.</p>
+{% else %}
+    <p>The patient is <strong>not likely</strong> to adhere to their medication regimen.</p>
+{% endif %}
+<p>Factors considered:</p>
+<ul>
+    <li>Age: {{ age }}</li>
+    <li>Gender: {{ 'Male' if gender == 1 else 'Female' }}</li>
+    <li>Total Cost: ${{ total_cost }}</li>
+    <li>Number of Previous Medications: {{ num_medications }}</li>
+    <li>Number of Previous Encounters: {{ num_encounters }}</li>
+    <li>Chronic Conditions: {{ chronic_conditions }}</li>
+</ul>
+<a href="{{ url_for('medication_adherence') }}">Make another prediction</a>
+{% endblock %}

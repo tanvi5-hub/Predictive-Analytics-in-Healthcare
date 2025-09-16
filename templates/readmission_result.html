@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Patient Readmission Prediction Result</h2>
+<p>Patient ID: {{ patient_id }}</p>
+<p>Age: {{ age }}</p>
+<p>Gender: {{ gender }}</p>
+<p>Length of Stay: {{ length_of_stay }} days</p>
+<p>Total Cost: ${{ total_cost }}</p>
+<h3>Prediction:</h3>
+<p>{{ prediction_message }}</p>
+<h3>Explanation:</h3>
+<p>{{ explanation }}</p>
+<a href="{{ url_for('readmission') }}">Make another prediction</a>
+{% endblock %}

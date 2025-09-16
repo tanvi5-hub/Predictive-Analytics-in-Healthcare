@@ -1,0 +1,13 @@
+
+{% extends "base.html" %}
+{% block content %}
+<h2>Cohort Analysis</h2>
+<img src="data:image/png;base64,{{ plot_url }}" alt="Cohort Analysis Visualizations" style="width:100%;">
+<h3>Interpretation:</h3>
+<ul>
+    <li>Age Cohort vs Average Claim Cost: Shows how average healthcare costs vary across different age groups.</li>
+    <li>Gender Cohort vs Average Claim Cost: Compares average healthcare costs between genders.</li>
+    <li>Encounter Class Cohort vs Average Claim Cost: Illustrates how average costs differ across types of medical encounters.</li>
+    <li>Condition Count Cohort vs Average Claim Cost: Shows how average healthcare costs increase with the number of conditions a patient has.</li>
+</ul>
+{% endblock %}

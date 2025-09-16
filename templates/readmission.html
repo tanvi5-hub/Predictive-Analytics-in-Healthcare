@@ -1,0 +1,14 @@
+
+{% extends "base.html" %}
+{% block content %}
+<h2>Patient Readmission Prediction</h2>
+<img src="data:image/png;base64,{{ plot_url }}" alt="Readmission Model Visualizations" style="width:100%;">
+<h3>Interpretation:</h3>
+<ul>
+    <li>The ROC curve compares the performance of Logistic Regression and Gradient Boosting models.</li>
+    <li>Confusion matrices show the prediction accuracy for each model.</li>
+    <li>The feature importance graph indicates which factors most strongly influence readmission risk.</li>
+    <li>The distribution of readmission probabilities shows the model's confidence in its predictions.</li>
+    <li>The correlation heatmap reveals relationships between different features.</li>
+</ul>
+{% endblock %}

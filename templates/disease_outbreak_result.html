@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Disease Outbreak Prediction Result</h2>
+<p>The prediction for patient ID {{ patient_id }} for the month {{ month }} of the year {{ year }} is:</p>
+{% if prediction == 1 %}
+    <p><strong>High Risk:</strong> The patient is likely to be affected by the disease outbreak.</p>
+{% else %}
+    <p><strong>Low Risk:</strong> The patient is not likely to be affected by the disease outbreak.</p>
+{% endif %}
+<p>Factors considered:</p>
+<ul>
+    <li>Age: {{ age }}</li>
+    <li>Significant past conditions:</li>
+    <ul>
+        {% for condition in past_conditions %}
+            <li>{{ condition }}</li>
+        {% endfor %}
+    </ul>
+    <li>Vaccination status: {{ vaccination_status }} vaccinations received</li>
+    <li>Geographical region: {{ region }}</li>
+</ul>
+<a href="{{ url_for('disease_outbreak') }}">Make another prediction</a>
+{% endblock %}

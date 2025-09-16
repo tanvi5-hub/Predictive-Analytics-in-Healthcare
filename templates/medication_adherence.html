@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Medication Adherence Prediction</h2>
+<img src="data:image/png;base64,{{ plot_url }}" alt="Medication Adherence Visualizations" style="width:100%;">
+<h3>Interpretation:</h3>
+<ul>
+    <li>The ROC curve compares the performance of Logistic Regression and SVM models in predicting medication adherence.</li>
+    <li>Confusion matrices display the prediction accuracy for each model.</li>
+    <li>The feature importance graph shows which factors most strongly influence medication adherence.</li>
+    <li>The distribution of adherence probabilities illustrates the model's confidence in its predictions.</li>
+    <li>The correlation heatmap reveals relationships between different features related to medication adherence.</li>
+</ul>
+{% endblock %}

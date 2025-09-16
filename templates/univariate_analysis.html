@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Univariate Analysis</h2>
+<img src="data:image/png;base64,{{ plot_url }}" alt="Univariate Analysis Visualizations" style="width:100%;">
+<h3>Interpretation:</h3>
+<ul>
+    <li>Age Distribution: Shows the spread of patient ages in the dataset.</li>
+    <li>Gender Distribution: Displays the proportion of each gender in the patient population.</li>
+    <li>Encounter Class Distribution: Illustrates the frequency of different types of medical encounters.</li>
+    <li>Top 10 Medications: Presents the most commonly prescribed medications.</li>
+    <li>Top 10 Conditions: Shows the most frequent medical conditions in the dataset.</li>
+    <li>Top 10 Immunizations: Displays the most common immunizations administered.</li>
+</ul>
+{% endblock %}
